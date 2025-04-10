@@ -511,13 +511,9 @@ app.listen(port, () => {
 </div>
 ```
 
-#### Step-7: Add some basic CSS
-
-##### `public/css/styles.css`
+#### Step-7: Add some basic CSS (`public/css/styles.css`)
 
 ```css
-// public/css/styles.css
-
 - {
   margin: 0;
   padding: 0;
