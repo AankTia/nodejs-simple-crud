@@ -201,3 +201,28 @@ h1 {
     display: flex;
     gap: 1rem;
 }
+
+/* Task detail view */
+.task-details h1 {
+    color: #007bff;
+}
+
+.task-description {
+    margin: 1.5rem 0;
+    line-height: 1.8;
+}
+
+.task-description h3 {
+    margin-bottom: 0.75rem;
+    color: #333;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
