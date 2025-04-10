@@ -1,13 +1,14 @@
 {
   "name": "nodejs-simple-crud",
   "version": "1.0.0",
-  "description": "This is a great combination for creating lightweight yet powerful applications that can perform Create, Read, Update, and Delete operations.",
-  "main": "index.js",
+  "description": "A simple CRUD application using Node.js and SQLite",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tia Widi",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^2.2.0",
