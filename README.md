@@ -437,11 +437,10 @@ app.listen(port, () => {
 </div>
 ```
 
-##### `views/edit.ejs`
+##### Step 6-4: Edit Task Form (`views/edit.ejs`)
 
 ```html
 // views/edit.ejs
-<%- include('layout') %>
 
 <div class="container">
   <h1>Edit Task</h1>
