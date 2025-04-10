@@ -750,12 +750,9 @@ footer {
 }
 ```
 
-#### Step-8: Add some basic client-side JavaScript
-
-##### `public/js/main.js`
+#### Step-8: Add some basic client-side JavaScript (`public/js/main.js`)
 
 ```javascript
-// public/js/main.js
 document.addEventListener('DOMContentLoaded', () => {
   // Add any client-side interactive features here
   console.log('Task Manager application loaded');
