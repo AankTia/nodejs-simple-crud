@@ -329,7 +329,7 @@ app.listen(port, () => {
 
 #### Step-6: Create view templates
 
-##### `views/layout.ejs`
+##### Step-6-1: Layout (`views/layout.ejs`)
 
 ```html
 // views/layout.ejs
@@ -366,49 +366,38 @@ app.listen(port, () => {
 </html>
 ```
 
-##### `views/index.ejs`
+##### Step-6-2: Index of Tasks (`views/index.ejs`)
 
 ```html
 // views/index.ejs 
 
-<%- include('layout') %>
-
 <div class="container">
-  <h1>Task List</h1>
-
-  <% if (tasks.length === 0) { %>
-  <p>No tasks found. <a href="/tasks/new">Create a new task</a>.</p>
-  <% } else { %>
-  <div class="task-list">
-    <% tasks.forEach(task => { %>
-    <div class="task-item">
-      <h3><%= task.title %></h3>
-      <p><%= task.description %></p>
-      <div class="task-meta">
-        <span class="status <%= task.status %>"><%= task.status %></span>
-        <span class="date"
-          >Created: <%= new Date(task.created_at).toLocaleString() %></span
-        >
-      </div>
-      <div class="task-actions">
-        <a href="/tasks/<%= task.id %>" class="btn btn-view">View</a>
-        <a href="/tasks/<%= task.id %>/edit" class="btn btn-edit">Edit</a>
-        <form
-          action="/tasks/<%= task.id %>?_method=DELETE"
-          method="POST"
-          class="delete-form">
-          <button
-            type="submit"
-            class="btn btn-delete"
-            onclick="return confirm('Are you sure you want to delete this task?')">
-            Delete
-          </button>
-        </form>
-      </div>
+    <h1>Task List</h1>
+    <% if (tasks.length === 0) { %>
+    <p>No tasks found. <a href="/tasks/new">Create a new task</a></p>
+    <% } else { %>
+    <div class="task-list">
+        <% tasks.forEach(task => { %>
+        <div class="task-item">
+            <h3><%= task.title %></h3>
+            <p><%= task.description %></p>
+            <div class="task-meta">
+                <span class="status <%= task.status %>"><%= task.status %></span>
+                <span class="date">Created: <%= new Date(task.created_at).toLocaleString() %></span>
+            </div>
+            <div class="task-actions">
+                <a href="/tasks/<%= task.id %>" class="btn btn-view">View</a>
+                <a href="/tasks/<%= task.id %>/edit" class="btn btn-edit">Edit</a>
+                <form action="/tasks/<%= task.id %>?_method=DELETE" method="post" class="delete-form">
+                    <button type="submit" class="btn btn-delete" onclick="return confirm('Are you sure you want to delete this task?')">
+                        Delete
+                    </button>
+                </form>
+            </div>
+        </div>
+        <% }) %>
     </div>
-    <% }) %>
-  </div>
-  <% } %>
+    <% } %>
 </div>
 ```
 
