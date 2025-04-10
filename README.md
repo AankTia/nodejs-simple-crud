@@ -77,7 +77,7 @@ npm install nodemon --save-dev
 ```json
 // package.json
 {
-  "name": "nodejs-sqlite-nodejs-simple-crud",
+  "name": "nodejs-simple-crud",
   "version": "1.0.0",
   "description": "A simple CRUD application using Node.js and SQLite",
   "main": "app.js",
@@ -86,14 +86,15 @@ npm install nodemon --save-dev
     "dev": "nodemon app.js"
   },
   "dependencies": {
-    "ejs": "^3.1.9",
-    "express": "^4.18.2",
-    "sqlite3": "^5.1.6",
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
     "method-override": "^3.0.0",
-    "body-parser": "^1.20.2"
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.1.9"
   }
 }
 ```
@@ -352,10 +353,12 @@ app.listen(port, () => {
       </nav>
     </header>
 
-    <main><%- body %></main>
+    <main>
+      <%- body %>
+    </main>
 
     <footer>
-      <p>&copy; 2025 Task Manager App</p>
+      <p>&copy; Task Manager App</p>
     </footer>
 
     <script src="/js/main.js"></script>
@@ -366,7 +369,9 @@ app.listen(port, () => {
 ##### `views/index.ejs`
 
 ```html
-// views/index.ejs <%- include('layout') %>
+// views/index.ejs 
+
+<%- include('layout') %>
 
 <div class="container">
   <h1>Task List</h1>
