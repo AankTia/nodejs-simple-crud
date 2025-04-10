@@ -401,10 +401,10 @@ app.listen(port, () => {
 </div>
 ```
 
-##### `views/create.ejs`
+##### Step 6-3: Create Task Form (`views/create.ejs`)
 
 ```html
-// views/create.ejs <%- include('layout') %>
+// views/create.ejs
 
 <div class="container">
   <h1>Create New Task</h1>
