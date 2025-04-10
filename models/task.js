@@ -48,7 +48,7 @@ class Task {
     }
 
     // Delete a task
-    static delete(is, callback) {
+    static delete(id, callback) {
         const sql = "DELETE FROM tasks WHERE id = ?";
         db.run(sql, [id], function (err) {
             if (err) {
