@@ -473,10 +473,10 @@ app.listen(port, () => {
 </div>
 ```
 
-##### `views/show.ejs`
+##### Step 6-5: View Task Detail (`views/show.ejs`)
 
 ```html
-// views/show.ejs <%- include('layout') %>
+// views/show.ejs
 
 <div class="container">
   <div class="task-details">
@@ -484,9 +484,7 @@ app.listen(port, () => {
 
     <div class="task-meta">
       <span class="status <%= task.status %>"><%= task.status %></span>
-      <span class="date"
-        >Created: <%= new Date(task.created_at).toLocaleString() %></span
-      >
+      <span class="date">Created: <%= new Date(task.created_at).toLocaleString() %></span>
     </div>
 
     <div class="task-description">
